@@ -5,6 +5,12 @@
   ## Description: 
 
   This project was an exercise in creating the back-end functionality of an e-commerce application using mysql, Sequelize, and an assortment of other npm packages.
+
+  ## Media
+
+  [Insomnia Walk-through](https://drive.google.com/file/d/1JxBZHEXLnukqfa7gm0oMbmuVbHSk-tRq/view)
+
+  [Command Line Walk-through](https://drive.google.com/file/d/1FenXYiGsP0Wn11U3xEV6viaioVR7q9UU/view)
   
 
   ## Table of Contents:
