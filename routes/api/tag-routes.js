@@ -12,11 +12,11 @@ router.get('/', (req, res) => {
       }
     ]
   })
-  .then(dbTag => res.json(dbTag))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbTag => res.json(dbTag))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.get('/:id', (req, res) => {
@@ -31,20 +31,20 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(dbTag => res.json(dbTag))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbTag => res.json(dbTag))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.post('/', (req, res) => {
   Tag.create(req.body)
-  .then(dbTag => res.json(dbTag))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbTag => res.json(dbTag))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.put('/:id', (req, res) => {
@@ -53,11 +53,11 @@ router.put('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(dbTag => res.json(dbTag))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbTag => res.json(dbTag))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.delete('/:id', (req, res) => {
@@ -66,11 +66,11 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(dbTag => res.json(dbTag))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbTag => res.json(dbTag))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 module.exports = router;

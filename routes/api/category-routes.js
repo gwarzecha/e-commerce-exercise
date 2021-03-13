@@ -28,17 +28,15 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     })
-
-
 });
 
 router.post('/', (req, res) => {
   Category.create(req.body)
-  .then(dbCategory => res.json(dbCategory))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbCategory => res.json(dbCategory))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.put('/:id', (req, res) => {
@@ -47,11 +45,11 @@ router.put('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(dbCategory => res.json(dbCategory))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbCategory => res.json(dbCategory))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.delete('/:id', (req, res) => {
@@ -60,12 +58,11 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(dbCategory => res.json(dbCategory))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
-
+    .then(dbCategory => res.json(dbCategory))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 module.exports = router;

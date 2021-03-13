@@ -120,11 +120,11 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(dbProduct => res.json(dbProduct))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbProduct => res.json(dbProduct))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 module.exports = router;
