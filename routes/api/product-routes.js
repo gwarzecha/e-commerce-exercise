@@ -5,14 +5,39 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // get all products
 router.get('/', (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
+  Product.findAll({
+    include: [Category,
+      {
+        model: Tag,
+        through: ProductTag
+      }]
+  })
+    .then(dbProduct => res.json(dbProduct))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 // get one product
 router.get('/:id', (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+  Product.findOne({
+    // find a single product by its `id`
+    where: {
+      id: req.params.id
+    },
+    // be sure to include its associated Category and Tag data
+    include: [Category,
+      {
+        model: Tag,
+        through: ProductTag
+      }]
+  })
+    .then(dbProduct => res.json(dbProduct))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 // create new product
