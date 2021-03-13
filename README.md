@@ -4,7 +4,7 @@
   
   ## Description: 
 
-  This project was an exercise in creating the back end of an e-commerce application using mysql, Sequelize, and an assortment of other npm packages.
+  This project was an exercise in creating the back-end functionality of an e-commerce application using mysql, Sequelize, and an assortment of other npm packages.
   
 
   ## Table of Contents:
@@ -16,13 +16,13 @@
   
   ## Installation: 
  
-  This app is not deployed, but the user could test the various API routes if they chose using Insomnia.
+  This app is not deployed, but the user could clone the repository and test the various API routes via Insomnia.
   
 
   
   ## Usage: 
 
-  The user can use CRUD methods to manipulate the categories, products, and tags of various items within an e-commerce application.
+  The user can use CRUD methods to manipulate the categories, products, and tags of various items within an e-commerce application. There is no front-end UI, so the user must use Insomnia or something similar to test the API endpoints and the efficacy of the various PUT, POST, GET, and DELETE methods. 
   
 
   
